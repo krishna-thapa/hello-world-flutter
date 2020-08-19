@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'image_banner.dart';
 import 'text_section.dart';
 
 class LocationDetail extends StatelessWidget {
@@ -10,9 +11,9 @@ class LocationDetail extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            TextSection(Colors.purpleAccent),
-            TextSection(Colors.green),
-            TextSection(Colors.deepOrange)
+            ImageBanner("assets/images/Pokhara_mountain.jpg"),
+            TextSection("Summary", "hello"),
+            TextSection("Hello", "world")
           ]),
     );
   }
