@@ -24,12 +24,26 @@ class Location {
         LocationFact('Interesting fact',
             'The massive peaks like Machhapuchhre, Dhaulagiri, Ganesh, Manaslu and Annapurna are seen towering towards the sky.')
       ]),
-      Location(1, 'Thakali khana', 'assets/images/Pokhara_khana.jpg', [
+      Location(3, 'Thakali khana', 'assets/images/Pokhara_khana.jpg', [
         LocationFact('Summary',
             'Thakali food basically comprises dal-bhat-tharkari − lentils, rice and vegetables, with masu (meat) for non-vegetarians. However, modern thakali restaurants also offer mo-mos (meat dumplings) and thukpa (noodle soup).'),
         LocationFact('Interesting fact',
-            'The Thakali are the people originated from the Thak Khola region of the Mustang District in Nepal. Thakali meal consists of locally grown buckwheat, barley, millet, rice, maize and dal.')
+            'The Thakali are the people originated from the Thak Khola region of the Mustang District in Nepal.')
       ])
     ];
+  }
+
+  static Location fetchByID(int locationID) {
+    // fetch all locations, iterate them and get the location that match
+    // the location id
+
+    List<Location> locations = Location.fetchAll();
+    // TODO: refactor by using map and write test cases
+    for (var i = 0; i < locations.length; i++) {
+      if (locations[i].id == locationID) {
+        return locations[i];
+      }
+    }
+    return null;
   }
 }
