@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'tile_overlay.dart';
 import '../../app.dart';
 import '../../models/location.dart';
+import '../../shared/rating.dart';
 import '../../widgets/image_banner.dart';
 
 class Locations extends StatelessWidget {

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:visit_pokhara_flutter/shared/rating.dart';
+import '../shared/heart.dart';
 import '../models/location.dart';
 import '../style.dart';
 
@@ -21,24 +23,25 @@ class LocationTile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            location.name.toUpperCase(),
-            overflow: TextOverflow.ellipsis,
-            maxLines: 1,
-            style: Theme.of(context)
-                .textTheme
-                .headline6
-                .copyWith(color: textColor),
-          ),
-          Text(
+          ListTile(
+            title: Text(
+              location.name.toUpperCase(),
+              overflow: TextOverflow.ellipsis,
+              maxLines: 1,
+              style: Theme.of(context)
+                  .textTheme
+                  .headline6
+                  .copyWith(color: textColor),
+            ),
+            subtitle: Text(
               location.userItinerarySummary.toUpperCase(),
               style: Theme.of(context).textTheme.subtitle2,
             ),
-          Text(
-            location.rating,
-            style:
-                Theme.of(context).textTheme.caption.copyWith(color: textColor),
-          )
+            trailing: HeartLike(),
+          ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(10,0,2,2),
+          child: Rating(location.rating),)
         ],
       ),
     );

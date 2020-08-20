@@ -21,6 +21,7 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  flutter_rating_bar: ^3.0.1+1
   flutter:
     sdk: flutter
 
@@ -55,15 +56,11 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: KaushanScript
+    - family: Alegreya
       fonts:
-        - asset: assets/fonts/KaushanScript-Regular.ttf
+        - asset: assets/fonts/Alegreya-Regular.ttf
           weight: 300
-    - family: Montserrat
-      fonts:
-        - asset: assets/fonts/Montserrat-Regular.ttf
-          weight: 300
-        - asset: assets/fonts/Montserrat-Bold.ttf
+        - asset: assets/fonts/Alegreya-Bold.ttf
           weight: 600
   #
   # For details regarding fonts from package dependencies,
