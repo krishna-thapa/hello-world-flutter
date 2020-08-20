@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'tile_overlay.dart';
 import '../../app.dart';
 import '../../models/location.dart';
+import '../../widgets/image_banner.dart';
 
 class Locations extends StatelessWidget {
   @override
@@ -9,12 +11,10 @@ class Locations extends StatelessWidget {
 
     return Scaffold(
         appBar: AppBar(title: Text('Locations in Pokhara')),
-        body: ListView(
-          children: locations
-              .map((location) => GestureDetector(
-                  child: Text(location.name),
-                  onTap: () => _onLocationTap(context, location.id)))
-              .toList(),
+        body: ListView.builder(
+          itemCount: locations.length,
+          itemBuilder: (context, index) =>
+              _itemBuilder(context, locations[index]),
         ));
   }
 
@@ -22,5 +22,20 @@ class Locations extends StatelessWidget {
   _onLocationTap(BuildContext context, int locationID) {
     Navigator.pushNamed(context, LocationDetailRoute,
         arguments: {"id": locationID});
+  }
+
+  Widget _itemBuilder(BuildContext context, Location location) {
+    return GestureDetector(
+      onTap: () => _onLocationTap(context, location.id),
+      child: Container(
+        height: 245.0,
+        child: Stack(
+          children: [
+            ImageBanner(assertPath: location.imagePath, height: 245.0),
+            TileOverlay(location)
+          ],
+        ),
+      ),
+    );
   }
 }
