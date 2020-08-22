@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'screens/local_detail/location_detail.dart';
 import 'screens/locations/locations.dart';
+import './shared/globals.dart' as globals;
 import 'style.dart';
-
-const LocationsRoute = '/';
-const LocationDetailRoute = '/location_detail';
 
 class App extends StatelessWidget {
   @override
@@ -21,10 +19,12 @@ class App extends StatelessWidget {
       final Map<String, dynamic> arguments = settings.arguments;
       Widget screen;
       switch (settings.name) {
-        case LocationsRoute:
+        case globals.LocationsRoute:
+          globals.showHeart = false;
           screen = Locations();
           break;
-        case LocationDetailRoute:
+        case globals.LocationDetailRoute:
+          globals.showHeart = true;
           screen = LocationDetail(arguments['id']);
           break;
         default:

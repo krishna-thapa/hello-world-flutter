@@ -47,7 +47,7 @@ class Location {
           ]),
           Location(
           id: 3,
-          name: 'Paragliding in Pokhara',
+          name: 'Paragliding',
           imagePath: 'assets/images/Pokhara_view.jpg',
           userItinerarySummary: 'Day 2: 10am - 8pm',
           rating: 3.5,

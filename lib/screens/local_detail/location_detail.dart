@@ -20,7 +20,8 @@ class LocationDetail extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  ImageBanner(assertPath: location.imagePath),
+                  ImageBanner(
+                      imageID: location.id, assertPath: location.imagePath),
                   Padding(
                     padding:
                         EdgeInsets.symmetric(vertical: 20.0, horizontal: 4.0),

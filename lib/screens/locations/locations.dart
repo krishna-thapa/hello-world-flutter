@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'tile_overlay.dart';
-import '../../app.dart';
 import '../../models/location.dart';
-import '../../shared/rating.dart';
+import '../../shared/globals.dart' as globals;
 import '../../widgets/image_banner.dart';
 
 class Locations extends StatelessWidget {
@@ -21,7 +20,7 @@ class Locations extends StatelessWidget {
 
   // leave out void if it is not returning anything
   _onLocationTap(BuildContext context, int locationID) {
-    Navigator.pushNamed(context, LocationDetailRoute,
+    Navigator.pushNamed(context, globals.LocationDetailRoute,
         arguments: {"id": locationID});
   }
 
@@ -32,7 +31,10 @@ class Locations extends StatelessWidget {
         height: 245.0,
         child: Stack(
           children: [
-            ImageBanner(assertPath: location.imagePath, height: 245.0),
+            ImageBanner(
+                imageID: location.id,
+                assertPath: location.imagePath,
+                height: 245.0),
             TileOverlay(location)
           ],
         ),
