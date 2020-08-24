@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// TODO: Make this class into Stateless
 class HeartLike extends StatefulWidget {
   @override
   _HeartState createState() => _HeartState();

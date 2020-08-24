@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:visit_pokhara_flutter/main.dart';
+import 'package:visit_pokhara_flutter/shared/global.dart';
 import 'package:visit_pokhara_flutter/shared/rating.dart';
 import '../shared/heart.dart';
-import '../shared/globals.dart' as globals;
 import '../models/location.dart';
 import '../style.dart';
 
@@ -38,7 +39,7 @@ class LocationTile extends StatelessWidget {
               location.userItinerarySummary.toUpperCase(),
               style: Theme.of(context).textTheme.subtitle2,
             ),
-            trailing: Visibility(visible: globals.showHeart, child: HeartLike()),
+            trailing: Visibility(visible: getIt<Global>().showHeart, child: HeartLike()),
           ),
           Rating(location.rating)
           // Padding(
