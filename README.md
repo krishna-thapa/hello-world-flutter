@@ -1,10 +1,13 @@
-# visit_pokhara_flutter
+# `visit_pokhara_flutter`
 
-A new simple Flutter project that shows the visit places around [Pokhara](https://en.wikipedia.org/wiki/Pokhara). 
+A simple Flutter project that shows the touristic places around [Pokhara](https://en.wikipedia.org/wiki/Pokhara). 
 
 ## Resources:
 - [Flutter Course - Full Tutorial for Beginners](https://www.youtube.com/watch?v=pTJJsmejUOQ)
 - [Flutter Animation Tutorial](https://www.youtube.com/watch?v=OtrWXLfGtqE&list=PL4cUxeGkcC9gP1qg8yj-Jokef29VRCLt1)
+
+## Further improvements:
+- Use of the state management: [Provider](https://pub.dev/packages/provider)
 
 ## Getting Started
 

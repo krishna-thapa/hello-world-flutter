@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:visit_pokhara_flutter/main.dart';
-import 'package:visit_pokhara_flutter/shared/global.dart';
 import 'screens/local_detail/location_detail.dart';
 import 'screens/locations/locations.dart';
 import './shared/globals.dart' as globals;
@@ -22,11 +20,11 @@ class App extends StatelessWidget {
       Widget screen;
       switch (settings.name) {
         case globals.LocationsRoute:
-          getIt<Global>().showHeart = false;
+          globals.showHeart = false;
           screen = Locations();
           break;
         case globals.LocationDetailRoute:
-          getIt<Global>().showHeart = true;
+          globals.showHeart = true;
           screen = LocationDetail(arguments['id']);
           break;
         default:
