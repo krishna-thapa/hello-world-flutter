@@ -1,5 +1,9 @@
 # `visit_pokhara_flutter`
 
+<p align="center">
+<img src="pokhara_flutter.gif" width="300" height="550" />
+</p>
+
 A simple Flutter project that shows the touristic places around [Pokhara](https://en.wikipedia.org/wiki/Pokhara). 
 
 ## Resources:
@@ -8,6 +12,12 @@ A simple Flutter project that shows the touristic places around [Pokhara](https:
 
 ## Further improvements:
 - Use of the state management: [Provider](https://pub.dev/packages/provider)
+- Use of the [scoped model](https://pub.dev/packages/scoped_model/example)
+- Write some unit testing
+- Fix the animation of the tile-overlay when navigating from `location-details` page to `locations` page
+
+## Articles regarding Dart languages:
+- [`const` vs `final`](https://stackoverflow.com/questions/50431055/what-is-the-difference-between-the-const-and-final-keywords-in-dart)
 
 ## Getting Started
 
